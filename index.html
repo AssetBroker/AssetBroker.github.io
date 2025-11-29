@@ -1903,6 +1903,10 @@
       
         
       
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1939,6 +1943,46 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="coverage/backend/src/PluginSystem/HotReloadSystem.cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HotReloadSystem.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="coverage/backend/src/PluginSystem/HotReloadSystem.hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HotReloadSystem.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -2055,6 +2099,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2063,7 +2109,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_4_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_4_3_9" >
         
           
           
@@ -2078,19 +2124,39 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_8_2_4_3_7">
+              <label class="md-nav__link " for="__nav_8_2_4_3_9">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_8_2_4_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_2_4_3_7">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_8_2_4_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_4_3_9">
             <span class="md-nav__icon md-icon"></span>
             Protocol
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="coverage/backend/src/PluginSystem/Protocol/AProtocol.cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AProtocol.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -2135,6 +2201,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2143,7 +2211,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_4_3_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2_4_3_10" >
         
           
           
@@ -2158,19 +2226,39 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_8_2_4_3_8">
+              <label class="md-nav__link " for="__nav_8_2_4_3_10">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_8_2_4_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_2_4_3_8">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_8_2_4_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_4_3_10">
             <span class="md-nav__icon md-icon"></span>
             Tool
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="coverage/backend/src/PluginSystem/Tool/ATool.cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ATool.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -2324,12 +2412,16 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="Colors/">Colors</a></td>
-<td>This class defined a good set of ANSI colors.</td>
+<td><a href="Inspection/">Inspection</a></td>
+<td>Base class to implement simplet self-reflexion in C++ <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4m-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Z"/></svg></span> <code>T</code> :    Child class itself !!! tip When creating a child class, define as follow : <code>cpp class ChildClass: public Inspection&lt;ChildClass&gt;</code> This will extand the ChildClass with the self-reflexion class Inspection !!! warning If the class you want to extand as a reflected class will be a parent class (I.E. You will create childs of this "target" class), you might want to mark inheritence as <strong>virtual</strong>. This is needed if your child class <em>also</em> need to be reflected. This way, there is no confilict between the parent reflexion, and the child reflexion.</td>
 </tr>
 <tr>
 <td><a href="CxxABI/">CxxABI</a></td>
 <td>Wrapper around usefull C++/C low level functions Got demangle, backtrace... !!! tip This class is only made of static functions. It does not contain constructor, nor destructor This means that you don't need to instanciate it, and only use it as if it was a namespace.</td>
+</tr>
+<tr>
+<td><a href="Colors/">Colors</a></td>
+<td>This class defined a good set of ANSI colors.</td>
 </tr>
 <tr>
 <td><a href="Exception/">Exception</a></td>
@@ -2338,10 +2430,6 @@
 <tr>
 <td><a href="NotImplementedError/">NotImplementedError</a></td>
 <td>Sample Flint::Exceptions::Exception to register NotImplemented features !!! tip You should use that Exception as a C++ Implementation of the Rust todo!() macro. !!! example <code>cpp throw_exception(Flint::Exceptions::NotImplementedError, "This function haven't been implemented as of today !");</code></td>
-</tr>
-<tr>
-<td><a href="Inspection/">Inspection</a></td>
-<td>Base class to implement simplet self-reflexion in C++ <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4m-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Z"/></svg></span> <code>T</code> :    Child class itself !!! tip When creating a child class, define as follow : <code>cpp class ChildClass: public Inspection&lt;ChildClass&gt;</code> This will extand the ChildClass with the self-reflexion class Inspection !!! warning If the class you want to extand as a reflected class will be a parent class (I.E. You will create childs of this "target" class), you might want to mark inheritence as <strong>virtual</strong>. This is needed if your child class <em>also</em> need to be reflected. This way, there is no confilict between the parent reflexion, and the child reflexion.</td>
 </tr>
 </tbody>
 </table>
