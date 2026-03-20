@@ -5373,8 +5373,8 @@
 <h1 id="aprotocolhpp">AProtocol.hpp</h1>
 <style>
 .linenodiv pre span {padding-left:4px;padding-right:4px}
-.linenodiv pre span:nth-child(25) {background-color: #ef5552dd;color: white;}
-.linenodiv pre span:nth-child(25)::before {content: "○ ";}
+.linenodiv pre span:nth-child(27) {background-color: #ef5552dd;color: white;}
+.linenodiv pre span:nth-child(27)::before {content: "○ ";}
 </style>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -5413,7 +5413,9 @@
 <span class="normal">34</span>
 <span class="normal">35</span>
 <span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/*</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/*</span>
 <span class="cm">** EPITECH PROJECT, 2025</span>
 <span class="cm">** tek4</span>
 <span class="cm">** File description:</span>
@@ -5425,6 +5427,7 @@
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;json/json.hpp&quot;</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;IPlugin.hpp&quot;</span>
 
@@ -5433,6 +5436,7 @@
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">AProtocol</span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">IPlugin</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="k">public</span><span class="o">:</span>
+<span class="w">            </span><span class="k">explicit</span><span class="w"> </span><span class="n">AProtocol</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="o">&amp;</span><span class="n">config</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">config</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">            </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">AProtocol</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
 
 <span class="w">            </span><span class="c1">//* Plugin Related Methods *//</span>
