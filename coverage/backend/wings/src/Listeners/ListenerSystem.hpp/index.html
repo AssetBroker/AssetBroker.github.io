@@ -5371,8 +5371,8 @@
 <h1 id="listenersystemhpp">ListenerSystem.hpp</h1>
 <style>
 .linenodiv pre span {padding-left:4px;padding-right:4px}
-.linenodiv pre span:nth-child(35) {background-color: #ef5552dd;color: white;}
-.linenodiv pre span:nth-child(35)::before {content: "○ ";}
+.linenodiv pre span:nth-child(36) {background-color: #ef5552dd;color: white;}
+.linenodiv pre span:nth-child(36)::before {content: "○ ";}
 </style>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -5436,7 +5436,12 @@
 <span class="normal">59</span>
 <span class="normal">60</span>
 <span class="normal">61</span>
-<span class="normal">62</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/*************</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/*************</span>
 <span class="cm"> *</span>
 <span class="cm"> *     @</span>
 <span class="cm"> *       @</span>
@@ -5457,6 +5462,7 @@
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ctime&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;utility&gt;</span>
 
 <span class="k">using</span><span class="w"> </span><span class="n">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="p">;</span>
 
@@ -5489,9 +5495,13 @@
 <span class="w">            </span><span class="kt">void</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ListenerSystem</span><span class="o">&amp;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">delete</span><span class="p">;</span>
 
 <span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w">        </span><span class="nf">loadListeners</span><span class="p">();</span>
-<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">createListener</span><span class="p">(</span>
+<span class="w">                        </span><span class="k">static</span><span class="w"> </span><span class="n">json</span><span class="w">        </span><span class="nf">listListeners</span><span class="p">();</span>
+<span class="w">                        </span><span class="k">static</span><span class="w"> </span><span class="n">json</span><span class="w">        </span><span class="nf">getListener</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+<span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">createListener</span><span class="p">(</span>
 <span class="w">              </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w">                         </span><span class="n">plugin_path</span><span class="p">,</span>
-<span class="w">              </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">port_config</span><span class="p">);</span>
+<span class="w">                            </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">port_config</span><span class="p">,</span>
+<span class="w">                            </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w">                         </span><span class="n">protocol_host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w">                         </span><span class="n">session_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
 <span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">deleteListener</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
 <span class="w">            </span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">deleteListeners</span><span class="p">();</span>
 <span class="w">    </span><span class="p">};</span>
