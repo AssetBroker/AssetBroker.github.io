@@ -5371,8 +5371,8 @@
 <h1 id="dockerhandlerhpp">DockerHandler.hpp</h1>
 <style>
 .linenodiv pre span {padding-left:4px;padding-right:4px}
-.linenodiv pre span:nth-child(33) {background-color: #ef5552dd;color: white;}
-.linenodiv pre span:nth-child(33)::before {content: "○ ";}
+.linenodiv pre span:nth-child(34) {background-color: #ef5552dd;color: white;}
+.linenodiv pre span:nth-child(34)::before {content: "○ ";}
 </style>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -5468,7 +5468,9 @@
 <span class="normal">91</span>
 <span class="normal">92</span>
 <span class="normal">93</span>
-<span class="normal">94</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/*************</span>
+<span class="normal">94</span>
+<span class="normal">95</span>
+<span class="normal">96</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/*************</span>
 <span class="cm"> *</span>
 <span class="cm"> *     @</span>
 <span class="cm"> *       @</span>
@@ -5486,6 +5488,7 @@
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ctime&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;curl/curl.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mutex&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tuple&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
@@ -5512,6 +5515,7 @@
 <span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">_version</span><span class="p">;</span>
 <span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">_buffer</span><span class="p">;</span>
 <span class="w">            </span><span class="n">CURL</span><span class="w">       </span><span class="o">*</span><span class="n">_curl</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="w">  </span><span class="n">_curlMutex</span><span class="p">;</span>
 
 <span class="w">            </span><span class="n">DockerHandler</span><span class="p">();</span>
 <span class="w">            </span><span class="o">~</span><span class="n">DockerHandler</span><span class="p">();</span>
